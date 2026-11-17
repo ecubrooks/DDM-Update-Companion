@@ -7,7 +7,7 @@ The app displays a countdown and popup for a pending DDM-enforced macOS update. 
 ## Deployment steps
 
 1. Review [MDM compatibility](DDM-Integration.md).
-2. [Install the app and choose a startup method](Installation.md).
+2. [Install the app and choose a startup method](Setup.md).
 3. [Deploy managed settings](Managed-Configuration.md).
 4. Review [Preferences and user controls](Preferences.md).
 5. Complete the [pilot checklist](Testing.md) before broad deployment.

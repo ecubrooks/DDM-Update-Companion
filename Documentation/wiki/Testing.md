@@ -1,8 +1,26 @@
-# Pilot deployment checklist
+# Testing deployment
 
 Scope the app and configuration profile to a small group of enrolled test Macs before wider deployment. Use Display-Only Mode to validate the packaged app and reminder scenarios before creating DDM policy; use a real DDM enforcement policy for final acceptance.
 
-| Check | Expected result |
+## Configure Demo mode
+
+The app calls its safe demonstration feature **Display-Only Mode**. Configure these values in the Jamf JSON form to show a simulated reminder without deploying a DDM declaration:
+
+| JSON setting | Demo value |
+| --- | --- |
+| Enable Display-Only Mode | `true` |
+| Display-Only Required Version | `macOS 27.2` |
+| Display-Only Scenario | `days` |
+| Display-Only Custom Deadline | Leave empty |
+| Show Automatic Popups | `true` |
+| Begin Reminders Before Deadline | `0` |
+| Hide Inactive Menu Bar Icon | `false` |
+
+To mimic the production environment, you can also configure **Custom Logo Path** with the absolute path to a PNG deployed on the Mac, such as `/Library/Application Support/DDMUpdateCompanion/logo.png`, and configure **Support URL** with your HTTPS support address. The settings profile does not deploy the PNG, so install it separately and ensure it is readable by the signed-in user.
+
+After the profile is installed, quit and reopen DDM Update Companion. The simulated reminder title begins with **DISPLAY ONLY —** and states that no DDM declaration was detected or enforced. Disable Display-Only Mode and restart the app before validating a real DDM policy.
+
+| Test Checks | Expected result |
 | --- | --- |
 | Install and open | App runs in the user session; Preferences is accessible even when the idle icon is hidden. |
 | Apply the app profile | Intended controls are locked and settings apply; unmanaged controls remain editable. |

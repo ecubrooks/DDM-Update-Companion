@@ -4,7 +4,7 @@
   <img src="Images/DDMUpdateCompanion.png" alt="DDM Update Companion dog mascot wearing a pirate hat" width="360">
 </p>
 
-Your helpful update companion: a friendly watchdog that keeps macOS update deadlines in sight and helps you get to Software Update.
+Your macOS update companion: a lightweight "watchdog" that keeps an eye on software update deadlines, barks when they are due, and points to Software Update, helping your Mac stay secure.
 
 A macOS menu bar app that shows a compact popup for updates enforced through Declarative Device Management (DDM).
 
@@ -95,7 +95,7 @@ DDM Update Companion grew out of my work on my own Software Update Prompt projec
 
 I decided to take a different direction and build a native Swift app. Around that time, I had started spending more time in Xcode and experimenting with its Codex integration. That gave me an opportunity to rethink the interface and build what I felt would be a better more streamlined experience.
 
-The [SUMB project](https://github.com/jeremy4971/sumb_public) also influenced the development of DDM Update Companion, particularly by helping me streamline some of the application's Preferences settings. The goal was to keep the reminder compact and approachable but let macOS administrators customize its behavior for their environments.
+The [SUMB project](https://github.com/jeremy4971/sumb_public) also influenced the development of DDM Update Companion, particularly by helping me streamline some of the application's Preferences settings. The goal was to let macOS administrators customize its behavior for their environments.
 
 See Apple's [software update enforcement documentation](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific) for the underlying MDM declaration.
 
@@ -108,13 +108,11 @@ See Apple's [software update enforcement documentation](https://developer.apple.
 
 The current app reads local DDM state and the installed macOS version/build. It stores preferences and reminder deferrals locally and writes DDM read failures to macOS unified logging. It contains no analytics uploader or direct MDM-server client. Opening the configured support link uses the default browser; that website has its own privacy practices. Software Update and MDM network activity are handled by macOS and your management tools.
 
-Before posting diagnostics, remove organization names, internal URLs, device identifiers, and any private information from logs, profiles, and screenshots. Use GitHub Issues for reproducible bugs with sanitized details; do not post credentials or private keys.
-
 ## Limitations and compatibility
 
 - The internal DDM persistence file may change between macOS releases. A configured minimum of macOS 15 is not a claim of fleet validation on every later OS.
 - The app does not install macOS updates, postpone the MDM deadline, or prove installation/compliance. Removing a declaration also clears its reminder.
-- No Notification Center notifications, meeting/Focus detection, weekly scheduling grid, automatic app updater, or SUMB/DDM OS Reminder profile import is implemented.
+- No Notification Center notifications, meeting/Focus detection, or weekly scheduling.
 - Profiles must use this app's domain and case-sensitive keys; similar settings in other reminder tools are not interchangeable.
 - During DDM read failures, the countdown and reminder rules continue using the last known deadline and current profile settings. Preferences reports the error and last successful read time. This cache lasts only for the running app session.
 - Copy Settings exports the 16 GUI fields. Nine additional profile-only settings are configured through profiles or local defaults; see the configuration reference.

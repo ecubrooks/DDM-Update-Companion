@@ -36,4 +36,4 @@ A successful read confirming no pending target clears the reminder. A temporaril
 
 Other read errors retain the last known deadline while countdown and profile-controlled reminder rules continue. Preferences shows the error and last successful read time. A successful read or a different read error resets the missing-file count. The cached deadline lasts only while the app is running.
 
-Complete the [pilot checklist](Testing.md) with your MDM. If it fails, use [Troubleshooting](Troubleshooting.md) and report sanitized observations rather than assuming vendor compatibility.
+Complete the [testing checklist](Testing.md) with your MDM. If it fails, use [Troubleshooting](Troubleshooting.md).

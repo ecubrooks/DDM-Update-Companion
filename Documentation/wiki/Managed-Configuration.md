@@ -14,7 +14,7 @@ Install the app separately. Then choose **one** method below for each group of s
 
 The JSON is a form schema, not a configuration profile. A preferences plist is also not a complete `.mobileconfig`; renaming its extension does not convert it.
 
-## Option A: Jamf JSON schema
+## Option A: Jamf JSON schema (Recommended method)
 
 1. Open the linked JSON file on GitHub and download its raw contents, not the HTML page.
 2. Create a macOS computer configuration profile in Jamf Pro.

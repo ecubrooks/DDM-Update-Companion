@@ -1,4 +1,4 @@
-# Installation and startup
+# Setup and startup
 
 ## Requirements
 
@@ -12,7 +12,7 @@
 2. Deploy the installer through your management tool, or extract the app ZIP and install `DDM Update Companion.app` in `/Applications`.
 3. Deploy the [app settings profile](Managed-Configuration.md) and any custom logo separately. The current installer contains only the app.
 4. Choose one startup method below.
-5. Open the app in the user's session and complete the [pilot checklist](Testing.md).
+5. Optional: Review [testing checklist](Testing.md).
 
 ## Start at login
 
@@ -27,7 +27,7 @@ Use one startup method, not both. A settings profile does not install or initial
 Choose Preferences from the menu bar, or reopen the app if its icon is hidden. You can also run:
 
 ```sh
-open -a DDMUpdateCompanion --args --preferences
+open -a /Applications/DDM\ Update\ Companion.app
 ```
 
 The app does not show a normal Dock icon. Hiding the Preferences menu is not an access restriction.

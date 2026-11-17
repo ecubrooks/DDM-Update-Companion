@@ -17,6 +17,6 @@ build/
 /.build/
 /Documentation/Publishing.md
 /Documentation/Development.md
-/Documentation/wiki/Development.md
+/Documentation/Testing.md
 /CHANGELOG.md
 /CONTRIBUTING.md
