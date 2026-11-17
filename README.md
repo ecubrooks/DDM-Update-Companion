@@ -64,11 +64,11 @@ To preview the design without a real update, choose **Save & Preview** in Prefer
 Documentation is readable directly in this repository; publishing a separate GitHub Wiki is optional. These files are not needed inside the app or installer. Installation, Preferences, managed configuration, and troubleshooting are the main administrator guides; the pilot checklist helps validate your deployment.
 
 - [Wiki home](Documentation/wiki/Home.md)
-- [Installation and deployment](Documentation/wiki/Installation.md)
-- [Preferences](Documentation/wiki/Preferences.md)
+- [Setup and deployment](Documentation/wiki/Setup.md)
+- [Preferences/Settings](Documentation/wiki/Preferences.md)
 - [Managed configuration](Documentation/wiki/Managed-Configuration.md)
 - [DDM behavior](Documentation/wiki/DDM-Integration.md)
-- [Pilot deployment checklist](Documentation/wiki/Testing.md)
+- [Testing deployment checklist](Documentation/wiki/Testing.md)
 - [Troubleshooting](Documentation/wiki/Troubleshooting.md)
 
 ## Configuration files
