@@ -1,0 +1,22 @@
+.DS_Store
+DerivedData/
+build/
+*.xcresult
+*.xcarchive
+*.dSYM/
+**/xcuserdata/
+*.xcuserstate
+.wiki-publish/
+
+
+# Local signing/release scripts (kept out of Git intentionally).
+/scripts/
+
+# Local distribution output and Swift build caches.
+/dist/
+/.build/
+/Documentation/Publishing.md
+/Documentation/Development.md
+/Documentation/wiki/Development.md
+/CHANGELOG.md
+/CONTRIBUTING.md

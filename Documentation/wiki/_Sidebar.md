@@ -1,0 +1,7 @@
+- [Deployment guide](Home.md)
+- [Installation and startup](Installation.md)
+- [Managed settings](Managed-Configuration.md)
+- [Preferences](Preferences.md)
+- [MDM compatibility](DDM-Integration.md)
+- [Pilot checklist](Testing.md)
+- [Troubleshooting](Troubleshooting.md)

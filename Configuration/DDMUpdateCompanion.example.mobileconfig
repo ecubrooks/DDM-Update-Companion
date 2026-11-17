@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DisplayOnlyModeEnabled</key>
+			<false/>
+			<key>DisplayOnlyRequiredVersion</key>
+			<string></string>
+			<key>DisplayOnlyScenario</key>
+			<string>days</string>
+			<key>DisplayOnlyDeadline</key>
+			<string></string>
+			<key>CustomLogoPath</key>
+			<string>/Library/Application Support/DDMUpdateCompanion/logo.png</string>
+			<key>SupportURL</key>
+			<string>https://support.example.com</string>
+			<key>PayloadDisplayName</key>
+			<string>DDM Update Companion Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.ecubrooks.DDMUpdateCompanion.settings</string>
+			<key>PayloadType</key>
+			<string>com.ecubrooks.DDMUpdateCompanion</string>
+			<key>PayloadUUID</key>
+			<string>8273570D-5C7C-4C76-A927-55EF50D1B564</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PopupEnabled</key>
+			<true/>
+			<key>PopupTitle</key>
+			<string>macOS Update Required</string>
+			<key>PopupMessage</key>
+			<string>A software update is required for your Mac.</string>
+			<key>PopupLeadDays</key>
+			<integer>0</integer>
+			<key>ReminderIntervalMinutes</key>
+			<integer>60</integer>
+			<key>HideRemindLaterButton</key>
+			<false/>
+			<key>HideRemindLaterButtonDays</key>
+			<integer>0</integer>
+			<key>HideRemindLaterButtonHours</key>
+			<integer>0</integer>
+			<key>StatusDotEnabled</key>
+			<false/>
+			<key>StatusDotLeadDays</key>
+			<integer>0</integer>
+			<key>StatusDotFlashHours</key>
+			<integer>24</integer>
+			<key>LaunchAtLogin</key>
+			<false/>
+			<key>QuietHoursEnabled</key>
+			<false/>
+			<key>QuietHoursStartHour</key>
+			<integer>22</integer>
+			<key>QuietHoursEndHour</key>
+			<integer>8</integer>
+			<key>QuietHoursUrgentOverride</key>
+			<true/>
+			<key>AllowQuit</key>
+			<true/>
+			<key>HidePreferences</key>
+			<false/>
+			<key>HideIconWhenInactive</key>
+			<true/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example managed preferences for DDM Update Companion, including disabled display-only settings. Remove keys you do not intend to enforce.</string>
+	<key>PayloadDisplayName</key>
+	<string>DDM Update Companion</string>
+	<key>PayloadIdentifier</key>
+	<string>com.ecubrooks.DDMUpdateCompanion.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>5417BEAA-1BBB-4F2F-99CB-B71E2217BA65</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

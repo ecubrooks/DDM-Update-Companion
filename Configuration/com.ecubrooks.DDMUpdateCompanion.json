@@ -1,0 +1,205 @@
+{
+    "title": "DDM Update Companion (com.ecubrooks.DDMUpdateCompanion)",
+    "description": "Configure DDM reminder preferences and an optional display-only simulation. Settings refresh every 60 seconds. This profile does not install the app or enforce macOS updates.",
+    "type": "object",
+    "properties": {
+        "SupportURL": {
+            "title": "Support URL",
+            "description": "Optional HTTPS help desk address, for example https://support.example.com. Leave empty to hide the help button. The app ignores addresses without HTTPS or a host.",
+            "property_order": 10,
+            "type": "string",
+            "default": "",
+            "options": {
+                "infoText": "Key name: SupportURL"
+            }
+        },
+        "CustomLogoPath": {
+            "title": "Custom Logo Path",
+            "description": "Optional absolute path, for example /Library/Application Support/DDMUpdateCompanion/logo.png. Deploy the image separately and make it readable by the logged-in user. Empty, missing, invalid, or oversized images (over 5 MB) use the Software Update symbol.",
+            "property_order": 20,
+            "type": "string",
+            "default": "",
+            "options": {
+                "infoText": "Key name: CustomLogoPath"
+            }
+        },
+        "DisplayOnlyModeEnabled": {
+            "title": "Enable Display-Only Mode",
+            "description": "Show a clearly labeled simulated update reminder without requiring a DDM declaration. This mode never detects or enforces an operating system update. Restart the app after changing this setting.",
+            "type": "boolean",
+            "default": false,
+            "property_order": 30
+        },
+        "DisplayOnlyRequiredVersion": {
+            "title": "Display-Only Required Version",
+            "description": "Version label shown by Display-Only Mode, for example macOS 27.2. An empty value automatically suggests the next macOS version.",
+            "type": "string",
+            "default": "",
+            "property_order": 40
+        },
+        "DisplayOnlyScenario": {
+            "title": "Display-Only Scenario",
+            "description": "Simulated deadline scenario used only when Display-Only Mode is enabled.",
+            "type": "string",
+            "default": "days",
+            "enum": ["days", "hours", "minutes", "dueNow", "overdue", "farFuture", "custom"],
+            "property_order": 50
+        },
+        "DisplayOnlyDeadline": {
+            "title": "Display-Only Custom Deadline",
+            "description": "ISO 8601 timestamp used by the custom scenario, for example 2027-12-31T17:00:00Z. Invalid or empty values fall back to three days from launch.",
+            "type": "string",
+            "default": "",
+            "property_order": 60
+        },
+        "PopupEnabled": {
+            "title": "Show Automatic Popups",
+            "description": "Enable automatic popups. Manual Show Update Reminder remains available.",
+            "type": "boolean",
+            "default": true,
+            "property_order": 70
+        },
+        "PopupTitle": {
+            "title": "Popup Title",
+            "description": "Title shown in the reminder.",
+            "type": "string",
+            "default": "macOS Update Required",
+            "property_order": 80
+        },
+        "PopupMessage": {
+            "title": "Popup Message",
+            "description": "Plain text shown in the reminder. No template variables.",
+            "type": "string",
+            "default": "A software update is required for your Mac.",
+            "property_order": 90
+        },
+        "PopupLeadDays": {
+            "title": "Begin Reminders Before Deadline (Days)",
+            "description": "0 starts immediately when an update is detected; otherwise begin this many days before the deadline.",
+            "type": "integer",
+            "default": 0,
+            "property_order": 100,
+            "minimum": 0,
+            "maximum": 365
+        },
+        "ReminderIntervalMinutes": {
+            "title": "Remind Later Interval (Minutes)",
+            "description": "Sets reminder interval in minutes. Used while more than 24 hours remain. At 24 hours the interval becomes 60 minutes; at eight hours it becomes 15 minutes, regardless of this value. Deferrals never cross the next timing boundary or deadline.",
+            "type": "integer",
+            "default": 60,
+            "property_order": 110,
+            "minimum": 1,
+            "maximum": 1440
+        },
+        "HideRemindLaterButton": {
+            "title": "Hide Remind Later Button",
+            "description": "Hide Remind Later button at the configured remaining-time threshold. When both days and hours fields are 0, hide it for the entire reminder.",
+            "type": "boolean",
+            "default": false,
+            "property_order": 115
+        },
+        "HideRemindLaterButtonDays": {
+            "title": "Hide Remind Later — Days Remaining",
+            "description": "Days in the remaining-time threshold. Combined with the hours value when Hide Remind Later Button is enabled.",
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 365,
+            "property_order": 116
+        },
+        "HideRemindLaterButtonHours": {
+            "title": "Hide Remind Later — Additional Hours",
+            "description": "Additional hours in the remaining-time threshold. Combined with the days value when Hide Remind Later Button is enabled.",
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 23,
+            "property_order": 117
+        },
+        "HideIconWhenInactive": {
+            "title": "Hide Inactive Menu Bar Icon",
+            "description": "Hide the icon when no managed update is pending. Reopen the app to access Preferences.",
+            "type": "boolean",
+            "default": true,
+            "property_order": 120
+        },
+        "HidePreferences": {
+            "title": "Hide Preferences Menu Item",
+            "description": "Hide Preferences from the menu. Command-comma still opens Preferences while the app or its menu is active. This does not restrict access to Preferences.",
+            "type": "boolean",
+            "default": false,
+            "property_order": 130
+        },
+        "AllowQuit": {
+            "title": "Allow Quitting the App",
+            "description": "Turn off to grey out Quit and disable Command-Q in the app menus. Does not prevent Force Quit or system logout and shutdown.",
+            "type": "boolean",
+            "default": true,
+            "property_order": 140
+        },
+        "StatusDotEnabled": {
+            "title": "Show Menu Bar Reminder Dot",
+            "description": "Show a small red dot over the Software Update icon when a managed update is pending. Independent of popup timing and Remind Later.",
+            "type": "boolean",
+            "default": false,
+            "property_order": 150
+        },
+        "StatusDotLeadDays": {
+            "title": "Begin Showing Dot Before Deadline (Days)",
+            "description": "0 shows the dot immediately; 1\u2013365 begins that many days before the deadline. Requires Show Menu Bar Reminder Dot.",
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 365,
+            "property_order": 160
+        },
+        "StatusDotFlashHours": {
+            "title": "Begin Flashing Dot Before Deadline (Hours)",
+            "description": "Slowly flash the visible dot during the final hours and while overdue. Default: 24 hours. Set 0 for a steady dot. Reduce Motion keeps the dot steady.",
+            "type": "integer",
+            "default": 24,
+            "minimum": 0,
+            "maximum": 8760,
+            "property_order": 170
+        },
+        "LaunchAtLogin": {
+            "title": "Launch at Login",
+            "description": "Register this app as a macOS login item. May require approval in System Settings. Use either this or the deployed LaunchAgent, not both.",
+            "type": "boolean",
+            "default": false,
+            "property_order": 180
+        },
+        "QuietHoursEnabled": {
+            "title": "Enable Quiet Hours",
+            "description": "Pause automatic popups during the configured local-time window. Manual Show Update Reminder and the menu bar remain available.",
+            "type": "boolean",
+            "default": false,
+            "property_order": 190
+        },
+        "QuietHoursStartHour": {
+            "title": "Quiet Hours Start (Local Hour, 0\u201323)",
+            "description": "Start hour on a 24-hour clock; 22 means 10 PM. Must differ from end hour.",
+            "type": "integer",
+            "default": 22,
+            "property_order": 200,
+            "minimum": 0,
+            "maximum": 23
+        },
+        "QuietHoursEndHour": {
+            "title": "Quiet Hours End (Local Hour, 0\u201323)",
+            "description": "End hour on a 24-hour clock; 8 means 8 AM. Windows can cross midnight. Equal start and end disables quiet hours.",
+            "type": "integer",
+            "default": 8,
+            "property_order": 210,
+            "minimum": 0,
+            "maximum": 23
+        },
+        "QuietHoursUrgentOverride": {
+            "title": "Allow Urgent Reminders During Quiet Hours",
+            "description": "Allow automatic popups in the final eight hours and while overdue. PopupEnabled and PopupLeadDays still apply.",
+            "type": "boolean",
+            "default": true,
+            "property_order": 220
+        }
+    }
+}
