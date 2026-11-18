@@ -1,7 +1,0 @@
- - [Deployment guide](Home.md)
-- [Setup and Installation](Setup.md)
-- [Managed settings](Managed-Configuration.md)
-- [Preferences](Preferences.md)
-- [MDM compatibility](DDM-Integration.md)
-- [Testing checklist](Testing.md)
-- [Troubleshooting](Troubleshooting.md)
