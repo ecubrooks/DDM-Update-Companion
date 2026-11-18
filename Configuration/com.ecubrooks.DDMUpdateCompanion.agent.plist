@@ -4,9 +4,13 @@
 <dict>
     <key>Label</key>
     <string>com.ecubrooks.DDMUpdateCompanion.agent</string>
+    <key>AssociatedBundleIdentifiers</key>
+    <array>
+        <string>com.ecubrooks.DDMUpdateCompanion</string>
+    </array>
     <key>ProgramArguments</key>
     <array>
-        <string>/Applications/DDM Update Companion.app/Contents/MacOS/DDM Update Companion</string>
+        <string>/Applications/DDM Update Companion.app/Contents/MacOS/DDMUpdateCompanion</string>
     </array>
     <key>LimitLoadToSessionType</key>
     <string>Aqua</string>
