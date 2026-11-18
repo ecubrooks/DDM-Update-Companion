@@ -15,6 +15,7 @@ build/
 # Local distribution output and Swift build caches.
 /dist/
 /.build/
+/Documentation/
 /Documentation/Publishing.md
 /Documentation/Development.md
 /Documentation/Testing.md
