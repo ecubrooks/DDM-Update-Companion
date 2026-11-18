@@ -18,7 +18,7 @@ The reminder stays near the upper-right corner of the active screen and shows th
 
 See the [Wiki](https://github.com/ecubrooks/DDM-Update-Companion/wiki) for configuration options and detailed behavior.
 
-![DDM Update Companion Preferences preview](images/screenshots/DDM-preferences-preview.png)
+![DDM Update Companion Preferences preview](Images/screenshots/DDM-preferences-preview.png)
 
 ## Quick start for macOS administrators
 1. Deploy the release app or installer to `/Applications`.
